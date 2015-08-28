@@ -1,0 +1,19 @@
+#!/usr/bin/python
+import sys
+import os
+import time
+def main():
+	os.system('clear')
+	mydata=input("please enter the list of numbers\n")
+	start=time.time()
+	gr8=max_in_list(mydata)
+	print("greatest number from list is :",gr8)
+	print("time taken:",time.time()-start)
+def max_in_list(x):
+	ans=x[0]	
+	for element in x:
+		if(element>ans):
+			ans=element
+	return ans
+if __name__=='__main__':
+	main()
