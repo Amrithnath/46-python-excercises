@@ -1,0 +1,22 @@
+#!/usr/bin/python
+import sys
+import os
+import time
+def main():
+	os.system('clear')
+	mydata=input("please enter the list of integers for which you want the histogram\n")
+	print('\n')
+	histogram(mydata)
+def histogram(mylst):
+	start=time.time()
+	print('\n')
+	for element in mylst:
+		i=0
+		x=""
+		for i in range(element):
+			x=x+'*'
+		print x
+	print("\n")
+	print('time taken:',time.time()-start)
+if __name__=='__main__':
+	main() 
