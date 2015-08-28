@@ -1,0 +1,29 @@
+#!/usr/bin/python
+import sys
+import os
+import time
+def main():
+	os.system('clear')
+	mystring=input('enter the sentence/word to be transalated\n')
+	start=time.time()
+	tstring=translate(mystring)
+	print('the translated version is \n')
+	print(tstring)
+	print("time taken :",time.time()-start)
+def translate(given):
+	result=given
+	con=[]
+	vow=['a','e','i','o','u']
+	for letter in given:
+		if((str(vow).find(letter)<0) and (str(con).find(letter)<0)):
+			result=result.replace(letter,letter+'o'+letter)
+			con.append(letter)
+		
+	return result
+if __name__=='__main__':
+	main()
+				
+				
+				
+		
+	
