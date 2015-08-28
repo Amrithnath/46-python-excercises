@@ -1,0 +1,25 @@
+#!/usr/bin/python
+import sys
+import os
+import time
+def main():
+	os.system('clear')
+	mylst1=input("please enter the 1st list in the form [arg1,arg2,arg3...,argn]")
+	mylst2=input("please enter the 2nd list in the form [arg1,arg2,arg3...,argn]")
+	start=time.time()
+	ans=overlapping(mylst1,mylst2)
+	print("Do the lists have any common elements/members?\n"+str(ans))
+	print"time taken:",time.time()-start
+	
+def overlapping(a,b):
+	for element in a:
+		for var in b:
+			if(element==var):
+				return True
+			
+	return False
+
+if __name__=='__main__':
+	main()	
+	
+	
